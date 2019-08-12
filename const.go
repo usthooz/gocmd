@@ -14,3 +14,8 @@ const (
 	// DefaultAuthType default by password
 	DefaultAuthType = AuthByPassword
 )
+
+const (
+	// SshAuthTimeout ssh auth timeout
+	SshAuthTimeout int64 = 5
+)
