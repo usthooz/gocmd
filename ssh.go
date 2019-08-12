@@ -13,8 +13,6 @@ import (
 type Gocmd struct {
 	// ssh client
 	Client *ssh.Client
-	// ssh client session
-	session *ssh.Session
 }
 
 type GocmdConfig struct {
@@ -81,14 +79,8 @@ func Connect(cfg *GocmdConfig) (*Gocmd, error) {
 		return nil, err
 	}
 
-	// session
-	session, err := sshClient.NewSession()
-	if err != nil {
-		return nil, err
-	}
 	return &Gocmd{
-		Client:  sshClient,
-		session: session,
+		Client: sshClient,
 	}, nil
 }
 
