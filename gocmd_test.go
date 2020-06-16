@@ -6,7 +6,7 @@ import (
 
 func TestGoCmd(t *testing.T) {
 	// config
-	cfg := Config("127.0.0.1", "22", "xc", "xctx0707", "", AuthByPassword)
+	cfg := Config("127.0.0.1", "22", "xc", "123456", "", AuthByPassword)
 	// connect
 	gcmd, err := Connect(cfg)
 	if err != nil {
